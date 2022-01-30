@@ -1,39 +1,33 @@
-<!-- 
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+## Lexo Rank
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages). 
+This package lets you generate lexo ranks in flutter. 
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages). 
--->
+## Usecases for lexo ranks
+- We use lexo ranks whenever we have use case of rearranging list items
+- instead of having integer based ranking we can have String and bucket based
+lexo ranks, so that rearranging list items is done in o(1) complexity.
+  Drag and drop is a popular feature in applications.
+  However, by implementing this functionality, you should be aware of some nuances:
+  a large number of elements, recalculation of the positions every time and some additional 
+  logic if you have different sections in the list.
+  
+You can read more about why and how to use lexo ranks here:
+https://medium.com/whisperarts/lexorank-what-are-they-and-how-to-use-them-for-efficient-list-sorting-a48fc4e7849f
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+## Example 
 
-## Features
+1. Generate first lexo rank we use -> 
+   `LexoRank rank = LexoRank.middle()`
+   
+2. Generate previous lexo rank ->  
+   `rank.genPrev()`
+   
+3. Generate next rank ->
+   `rank.genNext()`
+   
+4. Generate Middle Lexo Rank -> 
+   `prevLexoRank.between(nextLexoRank)`
+   
+Please go to root -> example/lib/main.dart to look into comprehensive example.
+ 
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
-
-## Getting started
-
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
-
-## Usage
-
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
-
-```dart
-const like = 'sample';
-```
-
-## Additional information
-
-TODO: Tell users more about the package: where to find more information, how to 
-contribute to the package, how to file issues, what response they can expect 
-from the package authors, and more.
