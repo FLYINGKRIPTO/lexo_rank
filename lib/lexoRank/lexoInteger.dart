@@ -41,7 +41,7 @@ class LexoInteger {
     if (identical(actualLength, mag.length)) {
       return LexoInteger(sys, sign, mag);
     }
-    final nmag = List<int>.filled(actualLength,0);
+    final nmag = List<int>.filled(actualLength, 0);
     lexoHelper.arrayCopy(mag, 0, nmag, 0, actualLength);
     return LexoInteger(sys, sign, nmag);
   }
@@ -216,8 +216,7 @@ class LexoInteger {
   LexoInteger negate() {
     return isZero()
         ? this
-        : LexoInteger.make(
-            sys, identical(sign, 1) ? -1 : 1, mag);
+        : LexoInteger.make(sys, identical(sign, 1) ? -1 : 1, mag);
   }
 
   LexoInteger shiftLeft([int times = 1]) {
@@ -246,8 +245,8 @@ class LexoInteger {
   }
 
   LexoInteger complementDigits(int digits) {
-    return LexoInteger.make(sys, sign,
-        LexoInteger.Complement(sys, mag, digits));
+    return LexoInteger.make(
+        sys, sign, LexoInteger.Complement(sys, mag, digits));
   }
 
   bool isZero() {
@@ -284,9 +283,7 @@ class LexoInteger {
       return -1;
     }
     if (identical(sign, 1)) {
-      return identical(other.sign, 1)
-          ? LexoInteger.compare(mag, other.mag)
-          : 1;
+      return identical(other.sign, 1) ? LexoInteger.compare(mag, other.mag) : 1;
     }
     if (identical(other.sign, -1)) {
       return 1;

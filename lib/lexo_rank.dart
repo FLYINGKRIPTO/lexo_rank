@@ -13,10 +13,10 @@ class LexoRank {
   static final EIGHT_DECIMAL = LexoDecimal.parse('8', NUMERAL_SYSTEM);
   static final MIN_DECIMAL = ZERO_DECIMAL;
   static final MAX_DECIMAL =
-  LexoDecimal.parse('1000000', NUMERAL_SYSTEM).subtract(ONE_DECIMAL);
+      LexoDecimal.parse('1000000', NUMERAL_SYSTEM).subtract(ONE_DECIMAL);
   static final MID_DECIMAL = LexoRank.Between(MIN_DECIMAL, MAX_DECIMAL);
   static final INITIAL_MIN_DECIMAL =
-  LexoDecimal.parse('100000', LexoRank.NUMERAL_SYSTEM);
+      LexoDecimal.parse('100000', LexoRank.NUMERAL_SYSTEM);
   static final INITIAL_MAX_DECIMAL = LexoDecimal.parse(
       LexoRank.NUMERAL_SYSTEM.toChar(LexoRank.NUMERAL_SYSTEM.getBase() - 2) +
           '00000',
@@ -123,7 +123,7 @@ class LexoRank {
     final sum = left.add(right);
     final mid = sum.multiply(LexoDecimal.half(left.getSystem()));
     final scale =
-    left.getScale() > right.getScale() ? left.getScale() : right.getScale();
+        left.getScale() > right.getScale() ? left.getScale() : right.getScale();
     if (mid.getScale() > scale) {
       final roundDown = mid.setScale(scale, false);
       if (roundDown.compareTo(left) > 0) {
@@ -141,7 +141,7 @@ class LexoRank {
     final formatVal = decimal.format();
     final val = StringBuilder(formatVal);
     var partialIndex =
-    formatVal.indexOf(LexoRank.NUMERAL_SYSTEM.getRadixPointChar());
+        formatVal.indexOf(LexoRank.NUMERAL_SYSTEM.getRadixPointChar());
     final zero = LexoRank.NUMERAL_SYSTEM.toChar(0);
     if (partialIndex < 0) {
       partialIndex = formatVal.length;
@@ -266,4 +266,3 @@ class LexoRank {
     return value.compareTo(other.value);
   }
 }
-

@@ -1,6 +1,7 @@
 ## Lexo Rank
 
-This package lets you generate lexo ranks in flutter. 
+This package lets you generate lexo ranks in flutter. Lexo rank ordering of items in a list
+according to their alphabetical rank.
 
 ## Usecases for lexo ranks
 - We use lexo ranks whenever we have use case of rearranging list items
@@ -12,7 +13,8 @@ lexo ranks, so that rearranging list items is done in o(1) complexity.
   logic if you have different sections in the list.
   
 You can read more about why and how to use lexo ranks here:
-https://medium.com/whisperarts/lexorank-what-are-they-and-how-to-use-them-for-efficient-list-sorting-a48fc4e7849f
+1. https://tmcalm.nl/blog/lexorank-jira-ranking-system-explained/
+2. https://medium.com/whisperarts/lexorank-what-are-they-and-how-to-use-them-for-efficient-list-sorting-a48fc4e7849f
 
 ## Example 
 

@@ -22,7 +22,7 @@ class LexoRankBucket {
       }
     }
 
-   throw AssertionError('Unknown bucket: ' + str);
+    throw AssertionError('Unknown bucket: ' + str);
   }
 
   static LexoRankBucket resolve(int bucketId) {

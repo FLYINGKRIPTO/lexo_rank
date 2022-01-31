@@ -1,6 +1,7 @@
 name: lexo_rank
-description: A new Flutter package project.
-version: 0.0.1
+description: Flutter package to generate lexo ranks, Lexo rank ordering of items in a list
+  according to their alphabetical rank. This alogirthm is used in JIRA's ranking system.
+version: 0.0.1+1
 homepage: https://github.com/FLYINGKRIPTO/lexo_rank
 
 environment:

@@ -18,8 +18,7 @@ class StringBuilder {
   }
 
   StringBuilder remove(int startIndex, int length) {
-    str =
-        str.substring(0, startIndex) + str.substring(startIndex + length);
+    str = str.substring(0, startIndex) + str.substring(startIndex + length);
     return this;
   }
 

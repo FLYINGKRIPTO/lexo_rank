@@ -24,10 +24,12 @@ class LexoNumeralSystem36 implements LexoNumeralSystem {
 
   @override
   int toDigit(String ch) {
-    if (ch.codeUnitAt(0) >= '0'.codeUnitAt(0) && ch.codeUnitAt(0) <= '9'.codeUnitAt(0)) {
+    if (ch.codeUnitAt(0) >= '0'.codeUnitAt(0) &&
+        ch.codeUnitAt(0) <= '9'.codeUnitAt(0)) {
       return ch.codeUnitAt(0) - 48;
     }
-    if (ch.codeUnitAt(0) >= 'a'.codeUnitAt(0) && ch.codeUnitAt(0) <= 'z'.codeUnitAt(0)) {
+    if (ch.codeUnitAt(0) >= 'a'.codeUnitAt(0) &&
+        ch.codeUnitAt(0) <= 'z'.codeUnitAt(0)) {
       return ch.codeUnitAt(0) - 97 + 10;
     }
     throw AssertionError('Not valid digit: ' + ch);

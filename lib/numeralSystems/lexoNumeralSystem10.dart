@@ -1,4 +1,3 @@
-
 import 'lexoNumeralSystem.dart';
 
 class LexoNumeralSystem10 implements LexoNumeralSystem {
@@ -24,7 +23,8 @@ class LexoNumeralSystem10 implements LexoNumeralSystem {
 
   @override
   int toDigit(String ch) {
-    if (ch.codeUnitAt(0) >= '0'.codeUnitAt(0) && ch.codeUnitAt(0) <= '9'.codeUnitAt(0)) {
+    if (ch.codeUnitAt(0) >= '0'.codeUnitAt(0) &&
+        ch.codeUnitAt(0) <= '9'.codeUnitAt(0)) {
       return ch.codeUnitAt(0) - 48;
     }
     throw AssertionError('Not valid digit: ' + ch);
