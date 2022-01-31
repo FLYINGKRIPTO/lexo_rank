@@ -3,5 +3,3 @@
 
 ## 0.0.10
 Updating readme and code formatting.
-
-Updar
