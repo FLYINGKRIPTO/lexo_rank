@@ -29,7 +29,13 @@ You can read more about why and how to use lexo ranks here:
    
 4. Generate Middle Lexo Rank -> 
    `prevLexoRank.between(nextLexoRank)`
-   
+
+5. Parse strings to make LexoRank objects
+   Usecase -> For example you are storing lexo ranks in Database as String, and in order to generate
+   new ranks, you will need LexoRank objects, the function `LexoRank.parse(str)` which accepts a string will
+   return you a `LexoRank` object
+   kudos to @maelchiotti for this documentation suggestion
+
 Please go to root -> example/lib/main.dart to look into comprehensive example.
  
 
